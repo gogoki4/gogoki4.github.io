@@ -1,0 +1,175 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #822FAF, #D55D92);
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #47126B;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  z-index: 10;
+}
+
+.navbar-left {
+  flex: 1;
+}
+
+.brand-name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+  color: #D55D92;
+}
+
+.navbar-right {
+  flex: 3;
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  color: #973AA8;
+}
+
+.navbar a.active {
+  color: #D55D92;
+  font-weight: bold;
+}
+
+.navbar a.active:hover {
+  color: #973AA8; /* Ensures the hover behavior is consistent */
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px auto;
+  padding: 20px;
+  max-width: 800px;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px; /* Width of the vertical bar */
+  height: 100%;
+  background: linear-gradient(to bottom, #C05299, #D55D92, #C05299); /* Add your gradient here */
+  z-index: -1; /* Ensure it appears behind the photos */
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-content {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  text-align: right;
+}
+
+.timeline-content img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: #D55D92;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-item:nth-child(even)::before {
+  transform: translateX(-50%);
+}
+
+/* Styling for the cute text at the end */
+.timeline-end {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  font-family: 'Dancing Script', cursive; /* Preserve the font */
+  font-size: 24px; /* Match the decorative font size */
+  color: #D55D92;
+  line-height: 1.5;
+}
+
+/* Remove the vertical bar from piercing the cute text */
+.timeline-end::before {
+  content: '';
+  position: absolute;
+  top: -20px; /* Creates the gap above */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px; /* Matches the timeline bar width */
+  height: 20px; /* Adjusts the gap */
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+  z-index: 2;
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .timeline-content {
+    text-align: center !important;
+  }
+}
+

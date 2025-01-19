@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden; 
+  }
+  
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.7; /* Adjust opacity here */
+    z-index: -1; /* Place the background behind content */
+  }
+  
+  .login-container {
+    position: absolute;
+    top: 12%; /* Move the top edge to the middle of the screen */
+    display: flex; /* Enable Flexbox */
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center items vertically */
+    padding: 250px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 80%; /* Container takes up 30% of the screen width */
+    max-width: 800px; 
+    height: 200px;
+    z-index: 1;
+  }
+  
+  .login-container img {
+    position: absolute;
+    top: 50%; /* Center vertically relative to the container */
+    left: 0px; /* Move it to the left of the container */
+    transform: translateY(-50%); /* Adjust vertical centering */
+    width: 620px; /* Set the size of the image */
+    height: 700px; /* Maintain aspect ratio */
+    border-radius: 20px; 
+    z-index: 2; /* Place it behind the container (optional) */
+    object-fit: cover;
+  }
+
+  #loginForm {
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Adjust the vertical position */
+    right: -227px; /* Adjust the horizontal position */
+    transform: translateY(-50%); /* Center vertically within the container */
+    width: 770px;
+  }
+
+  .login-container input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    right: 30px;
+  }
+  
+  .login-container button {
+    padding: 10px;
+    width: 407px;
+    background-color: #822FAF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-container button:hover {
+    background-color: #47126B;
+  }
+  .custom-text {
+    font-family: 'Dancing Script', cursive; /* Set the font */
+    font-size: 76px; /* Set the font size */
+    font-weight: bold; /* Optional: Make the text bold */
+    color: #822FAF; /* Set the text color */
+    position: absolute; /* Allow manual placement using coordinates */
+    top: 70px; /* Vertical position */
+    left: 780px; /* Horizontal position */
+    transform: translate(-50%, -50%); /* Optional: Center adjust based on its size */
+    z-index: 3;
+  }
+
+  .subtitle-text {
+    font-family: DM Sans, sans-serif; /* Matches body font */
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #555; /* Subtle, contrasting color */
+    position: absolute; /* Allow manual placement using coordinates */
+    top: 95px; /* Vertical position */
+    left: 700px; /* Horizontal position */
+    margin-bottom: 440px;
+    text-align: left;
+}
+
+.login-title {
+  font-family: Arial, sans-serif; /* Matches body font */
+  font-size: 1.5rem; /* Adjust size for prominence */
+  color: #822FAF; /* Match button hover color for consistency */
+  margin-bottom: 0px; /* Space between title and form */
+  text-align: left; /* Center-align above the form */
+}
+
+  

@@ -1,0 +1,147 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #822FAF, #D55D92);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #47126B;
+  display: flex; /* Use flexbox to align items */
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.navbar-left {
+  flex: 1; /* Push the text to the left */
+}
+
+.brand-name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+  color: #D55D92; /* Highlighted text color */
+}
+
+.navbar-right {
+  flex: 3; /* Allows the links to align right */
+  display: flex;
+  justify-content: flex-end; /* Align the links to the right */
+  gap: 24px; /* Add spacing between links */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  color: #973AA8;
+}
+
+.navbar a.active {
+  color: #D55D92; /* Keeps the active link highlighted */
+  font-weight: bold;
+}
+
+.navbar a.active:hover {
+  color: #973AA8; /* Ensures the hover behavior is consistent */
+}
+
+/* Countdown Section */
+.countdown-section {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.title {
+  font-size: 56px;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.time-box {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 150px;
+  height: 180px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform-origin: bottom;
+  transition: transform 0.6s ease-in-out;
+}
+
+.time-box.flip {
+  transform: rotateX(-180deg);
+}
+
+.number {
+  font-family: 'Dancing Script', sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  position: relative;
+}
+
+.label {
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .countdown {
+    flex-wrap: wrap;
+  }
+  .time-box {
+    width: 80px;
+    height: 100px;
+  }
+  .number {
+    font-size: 36px;
+  }
+  .label {
+    font-size: 14px;
+  }
+}
+
+.countdown-message {
+  font-size: 28px;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  margin-top: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+

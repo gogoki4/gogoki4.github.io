@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown to our Anniversary</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="countdown.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-left">
+      <span class="brand-name">Geolice</span>
+    </div>
+    <div class="navbar-right">
+      <a href="countdown.html" class="active">Countdown</a>
+      <a href="letter.html">Virtual love letter</a>
+      <a href="photo-album.html">Photo Album</a>
+      <a href="awards.html">Geolice Awards</a>
+    </div>
+  </header>
+
+  <main class="countdown-section">
+    <div id="countdown-title" class="title">Timp rămas până împlinim un an</div>
+    <div class="countdown">
+      <div class="time-box">
+        <div class="flip">
+          <span id="days" class="number">00</span>
+        </div>
+        <span class="label">Zile</span>
+      </div>
+      <div class="time-box">
+        <div class="flip">
+          <span id="hours" class="number">00</span>
+        </div>
+        <span class="label">Ore</span>
+      </div>
+      <div class="time-box">
+        <div class="flip">
+          <span id="minutes" class="number">00</span>
+        </div>
+        <span class="label">Minute</span>
+      </div>
+      <div class="time-box">
+        <div class="flip">
+          <span id="seconds" class="number">00</span>
+        </div>
+        <span class="label">Secunde</span>
+      </div>
+    </div>
+    <div id="countdown-message" class="countdown-message"></div>
+  </main>
+
+  <script src="countdown.js"></script>
+</body>
+</html>

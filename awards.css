@@ -1,0 +1,133 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #822FAF, #D55D92);
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #47126B;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  z-index: 10;
+}
+
+.navbar-left {
+  flex: 1;
+}
+
+.brand-name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+  color: #D55D92;
+}
+
+.navbar-right {
+  flex: 3;
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+  transform: translateX(-23px); /* Move the right section to the left */
+}
+
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  color: #973AA8;
+}
+
+.navbar a.active {
+  color: #D55D92;
+  font-weight: bold;
+}
+
+.navbar a.active:hover {
+  color: #973AA8; /* Ensures the hover behavior is consistent */
+}
+
+.quiz-container {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 900px;
+}
+
+.quiz-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 72px;
+  margin-bottom: 30px;
+}
+
+.question {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.question h2 {
+  font-family: 'Lora', serif;
+  font-size: 30px;
+  font-weight: 700; /* Bold for emphasis */
+  margin-bottom: 20px;
+  color: #F6E0B1; /* Soft, golden color for contrast */
+}
+
+.question-text {
+  font-family: 'Lora', serif; /* Choose a clean, modern font */
+  font-size: 21px;
+  font-weight: 400;
+  color: #FFFFFF; /* White text */
+  margin-top: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.image-row img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  object-fit: cover;
+}
+
+.image-row img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Divider Styling */
+.divider-image {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.divider-image img {
+  max-width: 70px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
