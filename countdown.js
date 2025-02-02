@@ -20,7 +20,7 @@ let targetDate = getTargetDate();
 function updateCountdown() {
   const now = new Date().toLocaleString("en-US", { timeZone: "Europe/Bucharest" }); // Current time in Bucharest
   const timeLeft = targetDate - new Date(now).getTime();
-
+  
   if (timeLeft <= 0) {
     // Set all time values to "00"
     document.getElementById("days").textContent = "00";
