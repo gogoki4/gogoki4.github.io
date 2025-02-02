@@ -28,10 +28,6 @@ function updateCountdown() {
     document.getElementById("minutes").textContent = "00";
     document.getElementById("seconds").textContent = "00";
     
-    // Change the title text and countdown message after the countdown expires
-    document.getElementById("countdown-title").textContent = "Timp rămas până la următoarea aniversare"; // Change the title
-    document.getElementById("countdown-message").textContent = "Felicitări! Suntem oficial împreună de un an. La mulți ani! 🎉"; // Customize the message
-    
     // Reset the target date to the next month's 20th at 15:45:00
     targetDate = getTargetDate();
     return;
